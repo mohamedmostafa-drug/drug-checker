@@ -101,5 +101,5 @@ if btn:
             st.success(f"تم العثور على {len(interactions)} تفاعل(ات).")
 
 st.divider()
-st.markdown(
+st.markdown)
 
