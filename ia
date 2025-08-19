@@ -1,0 +1,104 @@
+POST /ws/pidbws.asmx HTTP/1.1
+Host: www.pidb.dk
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "https://www.pidb.dk/WS/XML_Dato_4"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XML_Dato_4 xmlns="https://www.pidb.dk/WS">
+      <AccessKey>string</AccessKey>
+    </XML_Dato_4>
+  </soap:Body>
+</soap:Envelope>
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XML_Dato_4Response xmlns="https://www.pidb.dk/WS">
+      <XML_Dato_4Result>
+        <ID_XML_Dokument>string</ID_XML_Dokument>
+        <XML_Type>string</XML_Type>
+        <XML_Navn>string</XML_Navn>
+        <XML_Size>string</XML_Size>
+        <XML_Dato_Tid>string</XML_Dato_Tid>
+      </XML_Dato_4Result>
+    </XML_Dato_4Response>
+  </soap:Body>
+</soap:Envelope>
+SOAP 1.2
+The following is a sample SOAP 1.2 request and response. The placeholders shown need to be replaced with actual values.
+
+POST /ws/pidbws.asmx HTTP/1.1
+Host: www.pidb.dk
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <XML_Dato_4 xmlns="https://www.pidb.dk/WS">
+      <AccessKey>string</AccessKey>
+    </XML_Dato_4>
+  </soap12:Body>
+</soap12:Envelope>
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <XML_Dato_4Response xmlns="https://www.pidb.dk/WS">
+      <XML_Dato_4Result>
+        <ID_XML_Dokument>string</ID_XML_Dokument>
+        <XML_Type>string</XML_Type>
+        <XML_Navn>string</XML_Navn>
+        <XML_Size>string</XML_Size>
+        <XML_Dato_Tid>string</XML_Dato_Tid>
+      </XML_Dato_4Result>
+    </XML_Dato_4Response>
+  </soap12:Body>
+</soap12:Envelope>
+HTTP GET
+The following is a sample HTTP GET request and response. The placeholders shown need to be replaced with actual values.
+
+GET /ws/pidbws.asmx/XML_Dato_4?AccessKey=string HTTP/1.1
+Host: www.pidb.dk
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<XML_Dato_Doc xmlns="https://www.pidb.dk/WS">
+  <ID_XML_Dokument>string</ID_XML_Dokument>
+  <XML_Type>string</XML_Type>
+  <XML_Navn>string</XML_Navn>
+  <XML_Size>string</XML_Size>
+  <XML_Dato_Tid>string</XML_Dato_Tid>
+</XML_Dato_Doc>
+HTTP POST
+The following is a sample HTTP POST request and response. The placeholders shown need to be replaced with actual values.
+
+POST /ws/pidbws.asmx/XML_Dato_4 HTTP/1.1
+Host: www.pidb.dk
+Content-Type: application/x-www-form-urlencoded
+Content-Length: length
+
+AccessKey=string
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<XML_Dato_Doc xmlns="https://www.pidb.dk/WS">
+  <ID_XML_Dokument>string</ID_XML_Dokument>
+  <XML_Type>string</XML_Type>
+  <XML_Navn>string</XML_Navn>
+  <XML_Size>string</XML_Size>
+  <XML_Dato_Tid>string</XML_Dato_Tid>
+</XML_Dato_Doc>
