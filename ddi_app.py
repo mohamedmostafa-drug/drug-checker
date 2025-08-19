@@ -310,3 +310,85 @@ Content-Length: length
   <XML_Size>string</XML_Size>
   <XML_Dato_Tid>string</XML_Dato_Tid>
 </XML_Dato_Doc>
+POST /ws/pidbws.asmx HTTP/1.1
+Host: www.pidb.dk
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "https://www.pidb.dk/WS/XML_Download"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XML_Download xmlns="https://www.pidb.dk/WS">
+      <AccessKey>string</AccessKey>
+      <ID_XML_Dokument>string</ID_XML_Dokument>
+    </XML_Download>
+  </soap:Body>
+</soap:Envelope>
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <XML_DownloadResponse xmlns="https://www.pidb.dk/WS">
+      <XML_DownloadResult>xml</XML_DownloadResult>
+    </XML_DownloadResponse>
+  </soap:Body>
+</soap:Envelope>
+SOAP 1.2
+The following is a sample SOAP 1.2 request and response. The placeholders shown need to be replaced with actual values.
+
+POST /ws/pidbws.asmx HTTP/1.1
+Host: www.pidb.dk
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <XML_Download xmlns="https://www.pidb.dk/WS">
+      <AccessKey>string</AccessKey>
+      <ID_XML_Dokument>string</ID_XML_Dokument>
+    </XML_Download>
+  </soap12:Body>
+</soap12:Envelope>
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <XML_DownloadResponse xmlns="https://www.pidb.dk/WS">
+      <XML_DownloadResult>xml</XML_DownloadResult>
+    </XML_DownloadResponse>
+  </soap12:Body>
+</soap12:Envelope>
+HTTP GET
+The following is a sample HTTP GET request and response. The placeholders shown need to be replaced with actual values.
+
+GET /ws/pidbws.asmx/XML_Download?AccessKey=string&ID_XML_Dokument=string HTTP/1.1
+Host: www.pidb.dk
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0"?>
+xml
+HTTP POST
+The following is a sample HTTP POST request and response. The placeholders shown need to be replaced with actual values.
+
+POST /ws/pidbws.asmx/XML_Download HTTP/1.1
+Host: www.pidb.dk
+Content-Type: application/x-www-form-urlencoded
+Content-Length: length
+
+AccessKey=string&ID_XML_Dokument=string
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0"?>
+xml
