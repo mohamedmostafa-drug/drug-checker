@@ -103,7 +103,6 @@ if btn:
 st.divider()
 st.markdown("#made by Mohammed Mostafa")
 Host: www.pidb.dk
-Content-Type: text/xml;charset=utf-8
 Content-Length: length
 SOAPAction: "https://www.pidb.dk/WS/XML_Dato_2"
 
