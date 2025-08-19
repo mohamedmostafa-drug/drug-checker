@@ -102,7 +102,6 @@ if btn:
 
 st.divider()
 st.markdown("#made by Mohammed Mostafa")
-POST /ws/pidbws.asmx HTTP/1.1
 Host: www.pidb.dk
 Content-Type: text/xml; charset=utf-8
 Content-Length: length
